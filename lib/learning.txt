@@ -3,3 +3,21 @@ flutter is a programming language developed by google,
 type of flutter app
 material android
 cupertino ios
+the first page of an app that shows meta details is called splash screen
+double.infinity means maximium length
+
+types of images
+widget images
+Image class
+decoration image - 
+
+to change current page use Navigator
+go online continiously streambuilder
+go online once futurebuilder
+
+exit code 0 means successful,any other code is failed
+
+futurebuilder 
+streambuilder
+
+assets folder allows you to store images in flutter
