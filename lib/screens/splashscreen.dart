@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cool_app/screens/HomeScreen.dart';
+import 'package:cool_app/strings/strings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
         Duration(seconds: 3),
         () => Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (BuildContext context) => MyBettingApp())));
+            builder: (BuildContext context) => HomeScreen())));
   }
 
   build(context) {
@@ -25,8 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Container(
           decoration: BoxDecoration(
               image: DecorationImage(
-            image: CachedNetworkImageProvider(
-                'https://png.pngtree.com/thumb_back/fh260/back_our/20190621/ourmid/pngtree-poster-design-for-the-2018-world-cup-football-match-image_192456.jpg'),
+            image: CachedNetworkImageProvider(backgroundImageURL),
             fit: BoxFit.cover,
           )),
           width: double.infinity,
@@ -41,11 +41,6 @@ class _SplashScreenState extends State<SplashScreen> {
                     fontSize: 50,
                     fontWeight: FontWeight.bold),
               ),
-              Text('BETTING TIPS',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 33,
-                      fontWeight: FontWeight.bold)),
               SizedBox(
                 height: 100,
               )

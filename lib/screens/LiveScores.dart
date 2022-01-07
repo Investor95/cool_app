@@ -1,12 +1,11 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cool_app/strings/strings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
-
-import 'Fixtures.dart';
 
 class LiveScores extends StatefulWidget {
   const LiveScores({Key? key}) : super(key: key);
@@ -30,7 +29,7 @@ class _LiveScoresState extends State<LiveScores> {
           height: double.infinity,
           decoration: BoxDecoration(
               image: DecorationImage(
-                  image: NetworkImage(backgroundImageURL), fit: BoxFit.cover)),
+                  image:  CachedNetworkImageProvider(backgroundImageURL), fit: BoxFit.cover)),
           child: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.only(left: 10, top: 10, right: 10),
@@ -94,18 +93,11 @@ class _LiveScoresState extends State<LiveScores> {
                       var limit = 10;
                       List<Widget> widget = [];
 
-                      for (int i = 0;
-                          i < apiDetails['result'].length &&
-                              apiDetails['result'].length < 15;) {
+                      for (int i = 0; i < apiDetails['result'].length;) {
                         widget
                           ..addAll([
                             GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (cp) => Fixtures()));
-                              },
+                              onTap: () {},
                               child: Container(
                                   decoration: BoxDecoration(
                                       color: Colors.black,

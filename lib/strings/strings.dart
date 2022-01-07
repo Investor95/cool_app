@@ -9,3 +9,4 @@ var livescoreApi =
     'https://apiv2.allsportsapi.com/football/?met=Livescore&APIkey=$apiKey';
 
 var laligaKey = 300;
+var backgroundImage = 'https://png.pngtree.com/thumb_back/fh260/back_our/20190621/ourmid/pngtree-poster-design-for-the-2018-world-cup-football-match-image_192456.jpg';

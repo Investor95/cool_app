@@ -1,12 +1,13 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cool_app/screens/LiveScores.dart';
 import 'package:cool_app/strings/strings.dart';
 import 'package:flutter/material.dart';
 
-class MyBettingApp extends StatefulWidget {
-  createState() => MyBettingAppState();
+class HomeScreen extends StatefulWidget {
+  createState() => HomeScreenState();
 }
 
-class MyBettingAppState extends State<MyBettingApp> {
+class HomeScreenState extends State<HomeScreen> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
   // Making a betting app
   @override
@@ -67,7 +68,7 @@ class MyBettingAppState extends State<MyBettingApp> {
           constraints: BoxConstraints.expand(),
           decoration: BoxDecoration(
               image: DecorationImage(
-                  image: NetworkImage(backgroundImageURL), fit: BoxFit.cover)),
+                  image:  CachedNetworkImageProvider(backgroundImageURL), fit: BoxFit.cover)),
           child: Padding(
             padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
             child: Column(
@@ -149,7 +150,10 @@ class MyBettingAppState extends State<MyBettingApp> {
                                   style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.bold),
-                                )
+                                ),
+                                SizedBox(
+                                  width: 15,
+                                ),
                               ],
                             ),
                           ),
