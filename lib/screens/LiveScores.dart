@@ -20,14 +20,8 @@ class _LiveScoresState extends State<LiveScores> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 2), () {
-      setState(() {
-        isLoading = false;
-      });
-    });
   }
 
-  var isLoading = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -6,5 +6,9 @@ import 'package:flutter/material.dart';
 
 main() {
   runApp(
-      MaterialApp(debugShowCheckedModeBanner: false, home: (SplashScreen())));
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: (SplashScreen()),
+    ),
+  );
 }
